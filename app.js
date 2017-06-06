@@ -2,7 +2,6 @@ var express = require("express"),
     bodyParser = require("body-parser"),
     mongoose = require("mongoose"),
     Campground = require("./models/campground"),
-    seedDB = require("./seeds"),
     flash = require('connect-flash'),
     passport = require('passport'),
     methodOverride = require('method-override'),
@@ -66,9 +65,7 @@ app.use('/campground', campgroundRoutes);
 
 
 
-app.listen(3000, function() {
-    console.log("GO!Camping app started");
-});
+app.listen(3000);
 
 
 
