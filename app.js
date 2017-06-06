@@ -19,7 +19,9 @@ var commentRoutes = require('./routes/comments'),
 
 
 // Connect to database
-var db = mongoose.connect("mongodb://127.0.0.1:27017/GO_Camping");
+// var db = mongoose.connect("mongodb://127.0.0.1:27017/GO_Camping");
+var db = mongoose.connect("mongodb://davycode:swood/66@ds111622.mlab.com:11622/gocamping")
+
 
 
 
@@ -64,14 +66,8 @@ app.use('/campground', campgroundRoutes);
 
 
 
+//Setup the port for the server to listen on ==> port 3000
+const PORT = process.env.PORT || 3000;
 
-app.listen(3000);
-
-
-
-// RESTFUL ROUTES
-// ----------------
-// INDEX      -GET  /campground
-// NEW        -GET  /campground/new
-// CREATE     -POST /campground
-// SHOW       -GET  /campground/:id
+// Start the server, listening on port = PORT
+app.listen(PORT);
