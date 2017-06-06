@@ -1,1 +1,1 @@
-# GO--Camping-Heroku
+# GO-Camping-Heroku
