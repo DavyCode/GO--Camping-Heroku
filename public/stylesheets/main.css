@@ -1,6 +1,9 @@
-body {
-    background: #aa6666;
+#body {
     font-family: 'Baloo', cursive;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
 }
 
 .thumbnail img {
@@ -27,6 +30,8 @@ body {
     background: url(../images/2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100vw;
+    height: 100vh;
 }
 
 #content {
@@ -39,6 +44,7 @@ body {
 h1 {
     font-weight: 500;
     font-size: 5em;
+    color: white;
 }
 
 html {
@@ -49,4 +55,8 @@ html {
     width: 450px;
     border-top: 1px solid #f8f8f8;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#head-home {
+    color: white;
 }
