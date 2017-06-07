@@ -19,8 +19,8 @@ var commentRoutes = require('./routes/comments'),
 
 
 // Connect to database
-var db = mongoose.connect("mongodb://127.0.0.1:27017/GO_Camping");
-//const db = mongoose.connect("mongodb://davycode:swood/66@ds111622.mlab.com:11622/gocamping");
+//var db = mongoose.connect("mongodb://127.0.0.1:27017/GO_Camping");
+const db = mongoose.connect("mongodb://davycode:swood/66@ds111622.mlab.com:11622/gocamping");
 
 
 
@@ -32,7 +32,6 @@ app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
 
-// seedDB();  // seed database 
 
 
 // ==========
