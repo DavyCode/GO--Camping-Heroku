@@ -16,6 +16,7 @@ router.get("/", function(req, res) {
 
 router.get('/register', (req, res) => {
     res.render('register');
+    console.log(req.route.path);
 
 });
 

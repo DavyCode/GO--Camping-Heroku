@@ -19,8 +19,8 @@ var commentRoutes = require('./routes/comments'),
 
 
 // Connect to database
-//var db = mongoose.connect("mongodb://127.0.0.1:27017/GO_Camping");
-const db = mongoose.connect("mongodb://davycode:swood/66@ds111622.mlab.com:11622/gocamping");
+var db = mongoose.connect("mongodb://127.0.0.1:27017/GO_Camping");
+// const db = mongoose.connect("mongodb://davycode:swood/66@ds111622.mlab.com:11622/gocamping");
 
 
 
@@ -49,6 +49,10 @@ app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+
+// var path = req.route.path;
+// // var routing = path.slice(1);
+// res.locals.title = req.route.path.slice(1);
 
 // middleware
 app.use((req, res, next) => {
